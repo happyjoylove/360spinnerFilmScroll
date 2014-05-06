@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content='text/html;charset=UTF-8' http-equiv='content-type'>
+    <title>360 Spinner Film Scroller</title>
+    <script src="javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="javascripts/spritespin.js" type="text/javascript"></script>
+
+    <style type="text/css">
+      
+      body{background:#000;}
+
+      .spritespin-preload {
+        background : #ccc;
+      }
+      .spritespin-instance {
+        margin:0px auto;
+      }
+    </style>
+  </head>
+  <body>
+
+     <div id="panorama"></div>
+     <div id="panorama2"></div>
+   
+    
+    <script type="text/javascript">
+    $(function(){
+     
+      $("#panorama").spritespin({
+        width     : 310,
+        height    : 220,
+        frames    : 1280,
+        behavior  : "drag",
+        module    : "panorama",
+        sense     : -1,
+        source    : "images/kefirdasha.jpg",
+        animate   : true,
+        loop      : true,
+        frameWrap : true,
+        frameTime : 60
+      });
+
+      $("#panorama2").spritespin({
+        width     : 310,
+        height    : 280,
+        frames    : 1280,
+        behavior  : "drag",
+        module    : "panorama",
+        sense     : -1,
+        source    : "images/kefirtroopdasha.jpg",
+        animate   : true,
+        loop      : true,
+        frameWrap : true,
+        frameTime : 60
+      });
+      
+      
+    });
+    </script>
+  </body>
+</html>
